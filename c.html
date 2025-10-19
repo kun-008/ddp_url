@@ -300,11 +300,11 @@ var encodedParam = urlParams.get('c');
 var tureurl = atob(encodedParam);  // 进行url解密   atob 是将url进行base64解密，可以将url进行base64的解码
 if (tureurl.includes("http")) {
 var square = document.getElementById("container");
+var html='<iframe class="content" ��nl��ad="bindMouseWhee(this)" src='+tureurl+'></iframe>';
 setTimeout(function() {
   square.style.display = "none";
-}, 2000);
- var html='<iframe class="content" ��nl��ad="bindMouseWhee(this)" src='+tureurl+'></iframe>';
-  document.writeln(html);
+}, 2500); 
+document.writeln(html);
 console.log(tureurl);
 } else {
   console.log("nourls");
@@ -325,4 +325,5 @@ function bindMouseWhee(ifr){
 		alert('�����޷���ȡiframe����document'+e);
 	}
 }
+
 </script> 
